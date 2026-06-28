@@ -113,3 +113,8 @@ def get_mobile_app():
     </body>
     </html>
     """
+
+# --- AWS HEALTH CHECK ---
+@app.get("/")
+def system_check():
+    return {"status": "200 OK", "node": "baxter-healthy"}
